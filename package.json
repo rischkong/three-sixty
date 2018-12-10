@@ -1,36 +1,82 @@
 {
-  "name": "@mediaman/three-sixty",
-  "version": "1.0.1",
-  "description": "360° library",
-  "keywords": [],
-  "main": "dist/three-sixty.umd.js",
-  "module": "dist/three-sixty.es5.js",
-  "typings": "dist/types/three-sixty.d.ts",
-  "files": [
-    "dist"
-  ],
-  "author": "Mediaman <hallo@mediaman.de>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mediamanDE/three-sixty"
+  "_from": "@mediaman/three-sixty@0.0.9",
+  "_id": "@mediaman/three-sixty@0.0.9",
+  "_inBundle": false,
+  "_integrity": "sha512-AkvxBySGHwSuuoRrpjcz07oF7ICkSMuRe/QACBaT4Ibg3MCMPUhLHuvOLGPd9NtnzyEYRFFjq9L+hRLzNYuUcQ==",
+  "_location": "/@mediaman/three-sixty",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@mediaman/three-sixty@0.0.9",
+    "name": "@mediaman/three-sixty",
+    "escapedName": "@mediaman%2fthree-sixty",
+    "scope": "@mediaman",
+    "rawSpec": "0.0.9",
+    "saveSpec": null,
+    "fetchSpec": "0.0.9"
   },
-  "license": "MIT",
+  "_requiredBy": [
+    "/@mediaman/angular-three-sixty"
+  ],
+  "_resolved": "https://registry.npmjs.org/@mediaman/three-sixty/-/three-sixty-0.0.9.tgz",
+  "_shasum": "025d8ab80567cd01a422be1ffb0143d680dd5d96",
+  "_spec": "@mediaman/three-sixty@0.0.9",
+  "_where": "/Users/rischko/CloudStation/_work/audi/s19/_code/cwa/node_modules/@mediaman/angular-three-sixty",
+  "author": {
+    "name": "Mediaman",
+    "email": "hallo@mediaman.de"
+  },
+  "bugs": {
+    "url": "https://github.com/mediamanDE/three-sixty/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "hammerjs": "^2.0.8"
+  },
+  "deprecated": false,
+  "description": "360° library",
+  "devDependencies": {
+    "@types/jest": "^22.0.0",
+    "@types/node": "^8.0.0",
+    "autoprefixer": "^7.2.5",
+    "browserify": "^15.2.0",
+    "colors": "^1.1.2",
+    "core-js": "^2.5.3",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.0.1",
+    "husky": "^0.14.0",
+    "jest": "^22.0.2",
+    "lodash.camelcase": "^4.3.0",
+    "marked": "^0.3.9",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.16",
+    "postcss-cli": "^4.1.1",
+    "prettier": "^1.4.4",
+    "prompt": "^1.0.0",
+    "replace-in-file": "^3.0.0-beta.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.53.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.9.0",
+    "ts-jest": "^22.0.0",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.1.0",
+    "tslint-config-standard": "^7.0.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.6.2",
+    "validate-commit-msg": "^2.12.2"
+  },
   "engines": {
     "node": ">=6.0.0"
   },
-  "scripts": {
-    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src && npm run build-scss && npm run build-browser",
-    "build-scss": "node-sass --output-style compressed src/scss/three-sixty.scss dist/three-sixty.css && postcss --use autoprefixer -o dist/three-sixty.css dist/three-sixty.css",
-    "build-browser": "browserify dist/three-sixty.bundle.js --standalone ThreeSixty -o dist/three-sixty.bundle.js",
-    "start": "rollup -c rollup.config.ts -w",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
-    "deploy-docs": "ts-node tools/gh-pages-publish",
-    "report-coverage": "cat ./coverage/lcov.info | coveralls"
-  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/mediamanDE/three-sixty#readme",
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -56,46 +102,31 @@
     "collectCoverage": true,
     "mapCoverage": true
   },
-  "devDependencies": {
-    "@types/jest": "^22.0.0",
-    "@types/node": "^8.0.0",
-    "autoprefixer": "^7.2.5",
-    "browserify": "^15.2.0",
-    "colors": "^1.1.2",
-    "core-js": "^2.5.3",
-    "coveralls": "^3.0.0",
-    "cross-env": "^5.0.1",
-    "hoek": "^5.0.3",
-    "husky": "^0.14.0",
-    "jest": "^22.0.2",
-    "lodash.camelcase": "^4.3.0",
-    "marked": "^0.3.9",
-    "node-sass": "^4.9.0",
-    "postcss": "^6.0.16",
-    "postcss-cli": "^4.1.1",
-    "prettier": "^1.4.4",
-    "prompt": "^1.0.0",
-    "replace-in-file": "^3.0.0-beta.2",
-    "rimraf": "^2.6.1",
-    "rollup": "^0.53.0",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.9.0",
-    "ts-jest": "^22.0.0",
-    "ts-node": "^4.1.0",
-    "tslint": "^5.8.0",
-    "tslint-config-prettier": "^1.1.0",
-    "tslint-config-standard": "^7.0.0",
-    "typedoc": "^0.9.0",
-    "typescript": "^2.6.2",
-    "validate-commit-msg": "^2.12.2"
-  },
-  "dependencies": {
-    "@types/lodash": "^4.14.110",
-    "hammerjs": "^2.0.8"
-  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "dist/three-sixty.umd.js",
+  "module": "dist/three-sixty.es5.js",
+  "name": "@mediaman/three-sixty",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediamanDE/three-sixty.git"
+  },
+  "scripts": {
+    "build": "tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src && npm run build-scss && npm run build-browser",
+    "build-browser": "browserify dist/three-sixty.bundle.js --standalone ThreeSixty -o dist/three-sixty.bundle.js",
+    "build-scss": "node-sass --output-style compressed src/scss/three-sixty.scss dist/three-sixty.css && postcss --use autoprefixer -o dist/three-sixty.css dist/three-sixty.css",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "start": "rollup -c rollup.config.ts -w",
+    "test": "jest",
+    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "test:watch": "jest --watch"
+  },
+  "typings": "dist/types/three-sixty.d.ts",
+  "version": "0.0.9"
 }
