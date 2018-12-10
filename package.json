@@ -1,15 +1,15 @@
 {
-  "_from": "@mediaman/three-sixty@0.0.9",
-  "_id": "@mediaman/three-sixty@0.0.9",
+  "_from": "@rischkong/three-sixty@0.0.9",
+  "_id": "@rischkong/three-sixty@0.0.9",
   "_inBundle": false,
   "_integrity": "sha512-AkvxBySGHwSuuoRrpjcz07oF7ICkSMuRe/QACBaT4Ibg3MCMPUhLHuvOLGPd9NtnzyEYRFFjq9L+hRLzNYuUcQ==",
-  "_location": "/@mediaman/three-sixty",
+  "_location": "/@rischkong/three-sixty",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "@mediaman/three-sixty@0.0.9",
-    "name": "@mediaman/three-sixty",
+    "raw": "@rischkong/three-sixty@0.0.9",
+    "name": "@rischkong/three-sixty",
     "escapedName": "@mediaman%2fthree-sixty",
     "scope": "@mediaman",
     "rawSpec": "0.0.9",
@@ -17,18 +17,18 @@
     "fetchSpec": "0.0.9"
   },
   "_requiredBy": [
-    "/@mediaman/angular-three-sixty"
+    "/@rischkong/angular-three-sixty"
   ],
-  "_resolved": "https://registry.npmjs.org/@mediaman/three-sixty/-/three-sixty-0.0.9.tgz",
+  "_resolved": "https://registry.npmjs.org/@rischkong/three-sixty/-/three-sixty-0.0.9.tgz",
   "_shasum": "025d8ab80567cd01a422be1ffb0143d680dd5d96",
-  "_spec": "@mediaman/three-sixty@0.0.9",
-  "_where": "/Users/rischko/CloudStation/_work/audi/s19/_code/cwa/node_modules/@mediaman/angular-three-sixty",
+  "_spec": "@rischkong/three-sixty@0.0.9",
+  "_where": "/Users/rischko/CloudStation/_work/audi/s19/_code/cwa/node_modules/@rischkong/angular-three-sixty",
   "author": {
     "name": "Mediaman",
     "email": "hallo@mediaman.de"
   },
   "bugs": {
-    "url": "https://github.com/mediamanDE/three-sixty/issues"
+    "url": "https://github.com/rischkong/three-sixty/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -76,7 +76,7 @@
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/mediamanDE/three-sixty#readme",
+  "homepage": "https://github.com/rischkong/three-sixty#readme",
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -106,13 +106,13 @@
   "license": "MIT",
   "main": "dist/three-sixty.umd.js",
   "module": "dist/three-sixty.es5.js",
-  "name": "@mediaman/three-sixty",
+  "name": "@rischkong/three-sixty",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mediamanDE/three-sixty.git"
+    "url": "git+https://github.com/rischkong/three-sixty.git"
   },
   "scripts": {
     "build": "tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src && npm run build-scss && npm run build-browser",
