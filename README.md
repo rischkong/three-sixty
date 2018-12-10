@@ -1,4 +1,5 @@
 # 360° library
+RSK FIX
 
 A library that makes creating a 360° viewer extremely easy.
 
